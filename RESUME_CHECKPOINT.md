@@ -79,3 +79,9 @@ When the phone is available:
 ## Continuity advice
 
 Automatic context compaction does not require a new task: this file contains the durable state and exact remaining external checks. Continuing this task is preferable while it remains available because its summarized history is retained. If a new task is ever needed, ask it to read this file first; do not ask it to rediscover or reimplement completed work.
+
+## Source backup state
+
+The project was initialized as a local Git repository on branch `main` and a reviewed initial source/documentation commit was created. `.gitignore` excludes build outputs, APK/AAB packages, recordings, downloaded models, local Android properties, signing material, archives and common secret formats; the real model-repository source package and its tests are included. A second staged secret-pattern scan found no token/private-key value.
+
+The GitHub push is awaiting an account choice. The destination supplied by the owner is `https://github.com/TamidToki`, but the active Chrome/GitHub session and expired local CLI profile identify as `tahmid-toki`. No repository was created and the unrelated repository-transfer page already open in Chrome was not changed. Once the owner confirms the intended account and signs into it, create a private `PuheTrack` repository and push `main`.
