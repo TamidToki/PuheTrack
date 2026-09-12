@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data-extraction-rules>
+    <cloud-backup>
+        <!-- Encrypted API keys MUST NOT roam: the MasterKey lives in the
+             device Keystore, so a restored puhe_secrets.xml would decrypt
+             to nothing (silent empty keys). Exclude it explicitly. -->
+        <exclude domain="sharedpref" path="puhe_secrets.xml" />
+        <!-- Recordings + transcripts can be gigabytes; never back those up. -->
+        <exclude domain="file" path="recordings/" />
+        <exclude domain="external" path="recordings/" />
+        <exclude domain="file" path="sherpa-parakeet-fi-2bda32ec/" />
+    </cloud-backup>
+    <device-transfer>
+        <exclude domain="sharedpref" path="puhe_secrets.xml" />
+        <exclude domain="file" path="recordings/" />
+        <exclude domain="external" path="recordings/" />
+        <exclude domain="file" path="sherpa-parakeet-fi-2bda32ec/" />
+    </device-transfer>
+</data-extraction-rules>

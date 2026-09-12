@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Speech waveform becoming a path: compact, language-neutral and mask-safe. -->
+    <path
+        android:fillColor="#10233D"
+        android:pathData="M28,47 C24.7,47 22,49.7 22,53 L22,68 C22,71.3 24.7,74 28,74 C31.3,74 34,71.3 34,68 L34,53 C34,49.7 31.3,47 28,47 Z" />
+    <path
+        android:fillColor="#19A7A0"
+        android:pathData="M45,37 C41.1,37 38,40.1 38,44 L38,73 C38,76.9 41.1,80 45,80 C48.9,80 52,76.9 52,73 L52,44 C52,40.1 48.9,37 45,37 Z" />
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#10233D"
+        android:strokeWidth="12"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M63,32 L63,62 C63,75 71,79 78,68 L83,61" />
+    <path
+        android:fillColor="#FF6B5F"
+        android:pathData="M83,43 C79.1,43 76,46.1 76,50 C76,53.9 79.1,57 83,57 C86.9,57 90,53.9 90,50 C90,46.1 86.9,43 83,43 Z" />
+</vector>

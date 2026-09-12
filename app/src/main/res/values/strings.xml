@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">PuheTrack</string>
+    <string name="recording">Recording + translating FI→EN</string>
+    <string name="saved">Saved</string>
+    <string name="ready">Ready</string>
+    <string name="starting">Starting…</string>
+
+    <!-- Navigation tabs -->
+    <string name="tab_record">Record</string>
+    <string name="tab_files">Files</string>
+    <string name="tab_search">Search</string>
+    <string name="tab_settings">Settings</string>
+
+    <!-- Recorder screen -->
+    <string name="listening_prompt">Listening… speak Finnish.</string>
+    <string name="fi_placeholder">Finnish transcript appears here.</string>
+    <string name="en_placeholder">English translation appears here.</string>
+    <string name="en_follow">English follows here, ~1 s behind.</string>
+    <string name="record_btn">Record</string>
+    <string name="save_btn">Save</string>
+    <string name="share_btn">Share</string>
+
+    <!-- Files screen -->
+    <string name="no_recordings">No recordings yet.\nTap Record to start your first session.</string>
+    <string name="play">Play</string>
+    <string name="stop">Stop</string>
+    <string name="delete">Delete</string>
+    <string name="delete_all">Delete all</string>
+    <string name="confirm_delete_all">Tap again to delete ALL recordings</string>
+    <string name="clean_interrupted">Clean interrupted</string>
+
+    <!-- Detail screen -->
+    <string name="back_files">Files</string>
+    <string name="export_pdf">Export PDF</string>
+    <string name="study_pack">Study Pack</string>
+    <string name="study_pdf">Study PDF</string>
+    <string name="trim_clip">Trim Clip</string>
+    <string name="rename">Rename</string>
+
+    <!-- Search screen -->
+    <string name="search_all">Search all lessons</string>
+    <string name="search_hint">Finnish or English word…</string>
+    <string name="search_min_chars">Type at least 2 letters.</string>
+
+    <!-- Settings screen -->
+    <string name="settings_title">Settings</string>
+    <string name="engine_section">Speech → Text Engine</string>
+    <string name="translation_section">English Translation</string>
+    <string name="cloud_keys_section">Cloud Keys</string>
+    <string name="audio_quality_section">Audio Quality</string>
+    <string name="silence_section">Audio Preservation</string>
+    <string name="save_keys">Save Keys</string>
+    <string name="about_section">About</string>
+</resources>

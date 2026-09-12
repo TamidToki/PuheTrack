@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- App badge: orange rounded square + white microphone + waves -->
+    <path
+        android:fillColor="#FF7043"
+        android:pathData="M14,38 a24,24 0 0,1 24,-24 h32 a24,24 0 0,1 24,24 v32 a24,24 0 0,1 -24,24 h-32 a24,24 0 0,1 -24,-24 z"/>
+    <!-- mic capsule -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,32 c-4.4,0 -8,3.6 -8,8 v12 c0,4.4 3.6,8 8,8 s8,-3.6 8,-8 v-12 c0,-4.4 -3.6,-8 -8,-8z"/>
+    <!-- mic cradle -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="4"
+        android:strokeLineCap="round"
+        android:pathData="M45,58 c0,6 4,10 9,10 s9,-4 9,-10"/>
+    <!-- mic stem + base -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="4"
+        android:strokeLineCap="round"
+        android:pathData="M54,68 v6 M48,78 h12"/>
+    <!-- sound waves -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="3.5"
+        android:strokeLineCap="round"
+        android:pathData="M36,46 a10,10 0 0,0 0,16 M72,46 a10,10 0 0,1 0,16"/>
+</vector>

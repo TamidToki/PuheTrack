@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <exclude domain="sharedpref" path="puhe_secrets.xml" />
+    <exclude domain="file" path="recordings/" />
+    <exclude domain="file" path="sherpa-parakeet-fi/" />
+    <exclude domain="file" path="sherpa-parakeet-fi-2bda32ec/" />
+    <exclude domain="database" path="." />
+    <exclude domain="external" path="recordings/" />
+</full-backup-content>
