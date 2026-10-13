@@ -7,6 +7,27 @@ PuheTrack is an Android app for understanding Finnish speech in two deliberately
 
 The current implementation is version **2.14.4** (`versionCode 26`), package `com.puhetrack.app`, min SDK 26 and target SDK 36. Batch recording supports Android 8.0+; recorded Live Translate requires Android 13+ so the app can send its own captured PCM stream to the speech recognizer without a second microphone consumer. During an active Live session, setup copy collapses and the chronological Finnish/English feed follows the newest partial or translated text.
 
+## Architecture
+
+```mermaid
+flowchart LR
+    Mic[Microphone] --> Svc[RecordTranslateService<br/>foreground service, session state]
+    Svc --> Cap[BatchCaptureController<br/>PCM16, exact 30-min chunks]
+    Cap --> WAV[WAV chunk<br/>offline mode]
+    Cap --> MP3[MP3 chunk via LAME<br/>OpenAI and Live modes]
+    Cap -. same PCM stream .-> Rec[Android speech recognizer<br/>Live Translate]
+    WAV --> Q[ChunkProcessingWorker<br/>WorkManager, per-chunk state.json]
+    MP3 --> Q
+    Q --> Sherpa[Sherpa-ONNX Parakeet<br/>private :inference process]
+    Q --> OAI[OpenAI whisper-1]
+    Sherpa --> Tr[Translation<br/>ML Kit, Google or DeepL]
+    OAI --> Tr
+    Rec --> Tr
+    Tr --> Out[Transcript JSON, TXT, SRT, PDF]
+```
+
+The offline speech model is not stored in this repository. The app downloads it on first use from a pinned Hugging Face revision and verifies the size and SHA-256 of every file (see `PRODUCT.md`, "Offline model").
+
 ## Documentation
 
 - [`PRODUCT.md`](PRODUCT.md) — current product and architecture specification.
@@ -19,7 +40,7 @@ The current implementation is version **2.14.4** (`versionCode 26`), package `co
 - [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) — dependency/model license inventory for distribution.
 - [`RESUME_CHECKPOINT.md`](RESUME_CHECKPOINT.md) — current handoff/status record.
 
-`PLAN.md` and `AI_Review_Package/` are historical inputs, not the current specification. `/Users/tahmid_23/Documents/PuheTrack-for-Claude` is context only and is not part of this build.
+`PLAN.md` and `AI_Review_Package/` are historical inputs, not the current specification.
 
 ## Build
 
